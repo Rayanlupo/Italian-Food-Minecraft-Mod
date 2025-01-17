@@ -15,7 +15,7 @@ public class SpecialTridentsItem {
     public static final Item FIRE_TRIDENT = registerItem("fire_trident", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
-        return register(Registries.ITEM, Identifier.of(SpecialTridents.MOD_ID), name );, item);
+        return Registry.register(Registries.ITEM, Identifier.of(SpecialTridents.MOD_ID, name), item);
     }
 
     public static void registerModItems() {

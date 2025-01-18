@@ -1,6 +1,6 @@
 {
   "parent" : "minecraft:item/generated",
   "textures": {
-    "layer0" : "specialtridents:item/fire_trident"
+    "all" : "special-tridents:item/fire_trident"
   }
 }

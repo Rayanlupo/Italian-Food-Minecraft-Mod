@@ -6,5 +6,6 @@ public class SpecialTridentsClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
+
     }
 }

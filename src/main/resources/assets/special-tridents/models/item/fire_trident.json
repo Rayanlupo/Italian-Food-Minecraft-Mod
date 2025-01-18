@@ -1,6 +1,6 @@
 {
-  "parent" : "minecraft:item/generated",
+  "parent": "minecraft:item/handheld",
   "textures": {
-    "all" : "special-tridents:item/fire_trident"
+    "layer0": "fabric-docs-reference:item/fire_trident"
   }
 }

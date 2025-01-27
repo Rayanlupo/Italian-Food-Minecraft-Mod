@@ -1,6 +1,6 @@
 {
-  "item.specialtridents.fire_trident" : "Fire Trident"
-}
-{
-  "itemGroup.specialtridents": "Tridents"
+  "item.specialtridents.fire_trident" : "Fire Trident",
+  "entity.specialtridents.fire_trident" : "Fire Trident",
+  "itemGroup.specialtridents.tridents": "Tridents"
+
 }

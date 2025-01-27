@@ -1,31 +1,30 @@
+package net.minecraft.client.render.entity;
 
-package net.rayandev.specialtridents.entity.client;
-
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.entity.*;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
-import net.minecraft.client.render.entity.state.ProjectileEntityRenderState;
-import net.rayandev.specialtridents.entity.client.FireTridentEntityRenderState;
+import net.minecraft.client.render.entity.model.TridentEntityModel;
+import net.minecraft.client.render.entity.state.TridentEntityRenderState;
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
-import net.rayandev.specialtridents.entity.custom.FireTridentProjectileEntity;
 
-public class FireTridentEntityRenderer extends TridentEntityRenderer{
-
-    public static final Identifier TEXTURE = Identifier.of("specialtridents","textures/entity/fire_trident.png");
-    private final FireTridentEntityModel model;
-
+@Environment(EnvType.CLIENT)
+public class FireTridentEntityRenderer extends EntityRenderer<TridentEntity, TridentEntityRenderState> {
+    public static final Identifier TEXTURE = Identifier.ofVanilla("textures/entity/trident.png");
+    private final TridentEntityModel model;
 
     public FireTridentEntityRenderer(EntityRendererFactory.Context context) {
         super(context);
-        this.model = new FireTridentEntityModel(context.getPart(EntityModelLayers.TRIDENT));
+        this.model = new TridentEntityModel(context.getPart(EntityModelLayers.TRIDENT));
     }
-    public void render(FireTridentEntityRenderState tridentEntityRenderState, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
+
+    public void render(TridentEntityRenderState tridentEntityRenderState, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
         matrixStack.push();
         matrixStack.multiply(RotationAxis.POSITIVE_Y.rotationDegrees(tridentEntityRenderState.yaw - 90.0F));
         matrixStack.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(tridentEntityRenderState.pitch + 90.0F));
@@ -36,21 +35,15 @@ public class FireTridentEntityRenderer extends TridentEntityRenderer{
         matrixStack.pop();
         super.render(tridentEntityRenderState, matrixStack, vertexConsumerProvider, i);
     }
-    public FireTridentEntityRenderState createRenderState() {
-        return new FireTridentEntityRenderState();
+
+    public TridentEntityRenderState createRenderState() {
+        return new TridentEntityRenderState();
     }
 
-    public void updateRenderState(FireTridentProjectileEntity tridentEntity, FireTridentEntityRenderState tridentEntityRenderState, float f) {
-        super.updateRenderState(tridentEntity, FireTridentEntityRenderState, f);
+    public void updateRenderState(TridentEntity tridentEntity, TridentEntityRenderState tridentEntityRenderState, float f) {
+        super.updateRenderState(tridentEntity, tridentEntityRenderState, f);
         tridentEntityRenderState.yaw = tridentEntity.getLerpedYaw(f);
         tridentEntityRenderState.pitch = tridentEntity.getLerpedPitch(f);
         tridentEntityRenderState.enchanted = tridentEntity.isEnchanted();
     }
-
-
-
-    protected Identifier getTexture(ProjectileEntityRenderState state) {
-        return Identifier.of("specialtridents", "texture/entity/fire_trident.png");
-    }
-
 }

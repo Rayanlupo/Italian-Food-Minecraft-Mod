@@ -13,7 +13,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -137,6 +136,7 @@ public class FireTridentProjectileEntity extends PersistentProjectileEntity {
 
         this.deflect(ProjectileDeflection.SIMPLE, entity, this.getOwner(), false);
         this.setVelocity(this.getVelocity().multiply(0.02, 0.2, 0.02));
+        this.setOnFire(true);
         this.playSound(SoundEvents.ITEM_TRIDENT_HIT, 1.0F, 1.0F);
     }
 

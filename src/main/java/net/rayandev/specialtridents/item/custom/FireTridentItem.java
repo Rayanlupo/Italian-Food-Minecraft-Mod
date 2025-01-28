@@ -194,9 +194,9 @@ public class FireTridentItem extends Item implements ProjectileItem {
 
     @Override
     public ProjectileEntity createEntity(World world, Position pos, ItemStack stack, Direction direction) {
-        TridentEntity tridentEntity = new TridentEntity(world, pos.getX(), pos.getY(), pos.getZ(), stack.copyWithCount(1));
-        tridentEntity.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
-        return tridentEntity;
+        TridentEntity fireTridentEntity = new TridentEntity(world, pos.getX(), pos.getY(), pos.getZ(), stack.copyWithCount(1));
+        fireTridentEntity.pickupType = PersistentProjectileEntity.PickupPermission.ALLOWED;
+        return fireTridentEntity;
     }
 
 }

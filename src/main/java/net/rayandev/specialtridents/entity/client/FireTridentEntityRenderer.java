@@ -1,10 +1,12 @@
-package net.minecraft.client.render.entity;
+package net.rayandev.specialtridents.entity.client;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.entity.EntityRenderer;
+import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.render.entity.model.TridentEntityModel;
 import net.minecraft.client.render.entity.state.TridentEntityRenderState;
@@ -13,15 +15,16 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.RotationAxis;
+import net.rayandev.specialtridents.entity.client.FireTridentEntityModel;
 
 @Environment(EnvType.CLIENT)
 public class FireTridentEntityRenderer extends EntityRenderer<TridentEntity, TridentEntityRenderState> {
     public static final Identifier TEXTURE = Identifier.ofVanilla("textures/entity/trident.png");
-    private final TridentEntityModel model;
+    private final FireTridentEntityModel model;
 
     public FireTridentEntityRenderer(EntityRendererFactory.Context context) {
         super(context);
-        this.model = new TridentEntityModel(context.getPart(EntityModelLayers.TRIDENT));
+        this.model = new FireTridentEntityModel(context.getPart(EntityModelLayers.TRIDENT));
     }
 
     public void render(TridentEntityRenderState tridentEntityRenderState, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {

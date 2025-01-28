@@ -15,9 +15,8 @@ public class ModEntities {
     public static final EntityType<FireTridentProjectileEntity> FIRE_TRIDENT= Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of("specialtridents", "fire_trident"),
-            EntityType.Builder.<FireTridentProjectileEntity>create(
-                    SpawnGroup.MISC,
-                    FireTridentProjectileEntity::new
+            EntityType.Builder.create(
+                    FireTridentProjectileEntity::new, SpawnGroup.MISC
             )
                     .dimensions(EntityDimensions.fixed(0.5F, 0.5F)) // Dimensioni del proiettile
                     .trackRangeBlocks(4) // Distanza a cui il server traccia il proiettile

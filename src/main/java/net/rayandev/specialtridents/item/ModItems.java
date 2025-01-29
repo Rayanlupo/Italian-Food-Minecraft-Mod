@@ -32,31 +32,32 @@ public class ModItems {
     );
 
 
-    public static final Item FIRE_TRIDENT = register(new Item(new Item.Settings()
-            .rarity(Rarity.RARE)
-            .maxDamage(250)
-            .attributeModifiers(TridentItem.createAttributeModifiers())
-            .component(DataComponentTypes.TOOL, TridentItem.createToolComponent())
-            .enchantable(1)
-    .maxCount(1)
-            .fireproof()
-            .registryKey(TRIDENT_KEY)), TRIDENT_KEY);
-
 
 
 
     public static void registerModItems() {
+        Item FIRE_TRIDENT = register(new Item(new Item.Settings()
+                .rarity(Rarity.RARE)
+                .maxDamage(250)
+                .attributeModifiers(TridentItem.createAttributeModifiers())
+                .component(DataComponentTypes.TOOL, TridentItem.createToolComponent())
+                .enchantable(1)
+                .maxCount(1)
+                .fireproof()
+                .registryKey(TRIDENT_KEY)), TRIDENT_KEY);
+
+
         Identifier id = Identifier.of("specialtridents", "fire_trident");
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
 
         Item.Settings settings = new Item.Settings().registryKey(key);
 
-        // Log registration
+
         SpecialTridents.LOGGER.info("Registering Mod Items for " + SpecialTridents.MOD_ID);
 
 
 
-        // Register item group
+
         ItemGroup tridents = FabricItemGroup.builder()
                 .icon(() -> new ItemStack(FIRE_TRIDENT)) // FIRE_TRIDENT is now already registered
                 .displayName(Text.translatable("itemGroup.specialtridents"))
@@ -64,7 +65,7 @@ public class ModItems {
 
         Registry.register(Registries.ITEM_GROUP, TRIDENTS_GROUP_KEY, tridents);
 
-        // Add items to the custom item group
+
         ItemGroupEvents.modifyEntriesEvent(TRIDENTS_GROUP_KEY).register(entries -> {
             entries.add(FIRE_TRIDENT);
         });

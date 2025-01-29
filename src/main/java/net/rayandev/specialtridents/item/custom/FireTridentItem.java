@@ -25,7 +25,7 @@ public class FireTridentItem extends TridentItem{
 
     Item.Settings settings = new Item.Settings().registryKey(key);
 
-    public FireTridentItem(Item.Settings settings, RegistryKey<Item> key) {
+    public FireTridentItem(Item.Settings settings, RegistryKey<FireTridentItem> key) {
         super(settings);
     }
 

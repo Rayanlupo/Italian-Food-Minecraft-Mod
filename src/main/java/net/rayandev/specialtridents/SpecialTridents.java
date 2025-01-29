@@ -14,6 +14,6 @@ public class SpecialTridents implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
-		ModEntities.registerEntities();
+
 	}
 }

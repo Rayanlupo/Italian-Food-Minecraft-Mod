@@ -49,8 +49,9 @@ public class ModItems {
 
         Identifier id = Identifier.of("specialtridents", "fire_trident");
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
+        Item.Settings settings = new Item.Settings().registryKey(TRIDENT_KEY);
 
-        Item.Settings settings = new Item.Settings().registryKey(key);
+
 
 
         SpecialTridents.LOGGER.info("Registering Mod Items for " + SpecialTridents.MOD_ID);
@@ -59,7 +60,7 @@ public class ModItems {
 
 
         ItemGroup tridents = FabricItemGroup.builder()
-                .icon(() -> new ItemStack(FIRE_TRIDENT)) // FIRE_TRIDENT is now already registered
+                .icon(() -> new ItemStack(FIRE_TRIDENT))
                 .displayName(Text.translatable("itemGroup.specialtridents"))
                 .build();
 

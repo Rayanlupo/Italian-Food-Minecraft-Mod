@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "special-tridents",
+	"id": "italianfood",
 	"version": "${version}",
 	"name": "Special Tridents",
 	"description": "This is an example description! Tell everyone what your mod is about!",
@@ -16,13 +16,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.rayandev.specialtridents.SpecialTridents"
+			"net.rayandev.italianfood.ItalianFood"
 		],
 		"fabric-datagen": [
-			"net.rayandev.specialtridents.SpecialTridentsDataGenerator"
+			"net.rayandev.italianfood.ItalianFoodDataGenerator"
 		],
 		"client" : [
-			"net.rayandev.specialtridents.SpecialTridentsClient"
+			"net.rayandev.italianfood.ItalianFoodClient"
 		]
 	},
 	"mixins": [

@@ -3,10 +3,7 @@ package net.rayandev.specialtridents.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.TridentItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -26,10 +23,7 @@ public class ModItems {
         }
 
     public static final RegistryKey<Item> TRIDENT_KEY = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SpecialTridents.MOD_ID, "fire_trident"));
-    public static final RegistryKey<ItemGroup> TRIDENTS_GROUP_KEY = RegistryKey.of(
-            Registries.ITEM_GROUP.getKey(),
-            Identifier.of(SpecialTridents.MOD_ID, "item_group")
-    );
+
 
 
 
@@ -59,15 +53,10 @@ public class ModItems {
 
 
 
-        ItemGroup tridents = FabricItemGroup.builder()
-                .icon(() -> new ItemStack(FIRE_TRIDENT))
-                .displayName(Text.translatable("itemGroup.specialtridents"))
-                .build();
-
-        Registry.register(Registries.ITEM_GROUP, TRIDENTS_GROUP_KEY, tridents);
 
 
-        ItemGroupEvents.modifyEntriesEvent(TRIDENTS_GROUP_KEY).register(entries -> {
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(FIRE_TRIDENT);
         });
 

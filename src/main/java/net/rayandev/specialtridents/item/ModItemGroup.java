@@ -9,10 +9,5 @@ import net.minecraft.util.Identifier;
 import net.rayandev.specialtridents.SpecialTridents;
 
 public class ModItemGroup {
-    // Define your custom item group
-    public static final ItemGroup TRIDENTS = FabricItemGroup.builder(
-            )
-            .displayName(Text.translatable("itemGroup.specialtridents.tridents"))
-            .icon(() -> new ItemStack(Items.TRIDENT)) // Icon for the tab
-            .build();
+
 }

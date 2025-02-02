@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category" : "misc",
+  "ingredients": [
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "minecraft:honey_bottle",
+    "minecraft:honey_bottle",
+    "minecraft:honey_bottle"
+  ],
+  "result": {
+    "id": "italianfood:grissino",
+    "count": 16
+  }
+}

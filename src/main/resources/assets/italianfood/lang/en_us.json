@@ -2,6 +2,17 @@
   "item.italianfood.pizza" : "Pizza",
   "item.italianfood.mozzarella" : "Mozzarella",
   "item.italianfood.tarallo" : "Tarallo",
-  "item.italianfood.focaccia" : "Focaccia"
-
+  "item.italianfood.focaccia" : "Focaccia",
+  "item.italianfood.grissino" : "Grissinp",
+  "item.italianfood.tiramisu" : "Tiramisù",
+  "item.italianfood.espresso" : "Espresso",
+  "item.italianfood.lasagna" : "Lasagna",
+  "itemTooltip.italianfood.espresso" : "Gives you a quick energy boost for 1 minute",
+  "itemTooltip.italianfood.tarallo": "Crunchy snack, boosts resistance!",
+  "itemTooltip.italianfood.tiramisu" : "A sweet boost of energy!",
+  "itemTooltip.italianfood.focaccia" : "Soft and savory, restores extra hunger!",
+  "itemTooltip.italianfood.pizza" : "A slice of joy, grants regeneration!",
+  "itemTooltip.italianfood.mozzarella" : "Rich in calcium, grants resistance!",
+  "itemTooltip.italianfood.lasagna" : "Restores a lot of hunger and grants Resistance due to its rich, layered strength",
+  "itemTooltip.italianfood.grissino" : "Crunchy breadstick that make you feel light on your feet!"
 }

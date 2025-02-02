@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category" : "misc",
+  "ingredients": [
+    "minecraft:beef",
+    "minecraft:beef",
+    "minecraft:beef",
+    "minecraft:egg",
+    "minecraft:egg",
+    "minecraft:egg",
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "minecraft:wheat"
+  ],
+  "result": {
+    "id": "italianfood:lasagna",
+    "count": 1
+  }
+}

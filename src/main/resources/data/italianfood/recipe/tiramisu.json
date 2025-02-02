@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category" : "misc",
+  "ingredients": [
+    "italianfood:espresso",
+    "italianfood:espresso",
+    "italianfood:espresso",
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:egg",
+    "minecraft:egg",
+    "minecraft:egg"
+  ],
+  "result": {
+    "id": "italianfood:tiramisu",
+    "count": 1
+  }
+}

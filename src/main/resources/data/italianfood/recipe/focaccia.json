@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category" : "misc",
+  "ingredients": [
+    "minecraft:honey_bottle",
+    "minecraft:honey_bottle",
+    "minecraft:honey_bottle",
+    "minecraft:bread",
+    "minecraft:bread",
+    "minecraft:bread"
+
+  ],
+  "result": {
+    "id": "italianfood:focaccia",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category" : "misc",
+  "ingredients": [
+    "italianfood:mozzarella",
+    "italianfood:mozzarella",
+    "italianfood:mozzarella",
+    "minecraft:bread",
+    "minecraft:bread",
+    "minecraft:bread"
+  ],
+  "result": {
+    "id": "italianfood:pizza",
+    "count": 1
+  }
+}

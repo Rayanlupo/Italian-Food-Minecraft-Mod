@@ -2,17 +2,17 @@
 	"schemaVersion": 1,
 	"id": "italianfood",
 	"version": "${version}",
-	"name": "Special Tridents",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Italian Food",
+	"description": "dd delicious Italian foods to Minecraft! Craft and eat focaccia, pizza, mozzarella, taralli, espresso, and tiramisù, each giving unique effects to enhance your adventure!",
 	"authors": [
-		"Me!"
+		"RayanLupoDev"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/Rayanlupo",
+		"sources": "https://github.com/Rayanlupo/Italian-Food-Minecraft-Mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/special-tridents/icon.png",
+	"license": "CC-BY-NC-4.0",
+	"icon": "assets/italianfood/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -26,7 +26,7 @@
 		]
 	},
 	"mixins": [
-		"special-tridents.mixins.json"
+		"italianfood.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",
